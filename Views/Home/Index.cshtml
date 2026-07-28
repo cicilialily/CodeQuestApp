@@ -1,0 +1,361 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section">
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🚀 <span>CodeQuest</span>
+        </div>
+
+        <div class="nav-links">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a href="#languages">Languages</a>
+            <a href="#how-it-works">How It Works</a>
+            <a asp-controller="Account" action asp-action="Login"class="login-btn">Log In</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="welcome-badge">
+                🌟 Welcome to CodeQuest!
+            </div>
+
+            <h1>
+                Learn to Code.
+                <span>Play. Explore. Create!</span>
+            </h1>
+
+            <p>
+                Discover the exciting world of programming through
+                fun lessons, exciting quests, quizzes, and coding challenges
+                designed especially for young learners.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a asp-controller="Account"
+                asp-action="Register"
+                class="start-btn">🚀 Start Your Coding Adventure</a>
+
+                <a href="#languages" class="explore-btn">
+                    🔍 Explore Languages
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-character">
+
+            <div class="planet">
+                🪐
+            </div>
+
+            <div class="coding-card">
+
+                <div class="card-top">
+                    <span>💻</span>
+                    <span>CodeQuest</span>
+                </div>
+
+                <div class="code-lines">
+                    <p><span>print</span>("Hello World!")</p>
+                    <p><span>level</span> = <strong>1</strong></p>
+                    <p><span>xp</span> = <strong>100</strong></p>
+                </div>
+
+                <div class="success-message">
+                    🎉 Quest Complete!
+                </div>
+
+            </div>
+
+            <div class="floating-star star-one">⭐</div>
+            <div class="floating-star star-two">✨</div>
+            <div class="floating-star star-three">🌟</div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<section class="languages-section" id="languages">
+
+    <div class="section-heading">
+
+        <p class="section-label">🌍 EXPLORE THE CODING WORLD</p>
+
+        <h2>
+            Choose Your <span>Adventure</span>
+        </h2>
+
+        <p>
+            Pick a programming language and start your journey.
+            Learn at your own pace and unlock new coding powers!
+        </p>
+
+    </div>
+
+
+    <div class="language-grid">
+
+        <div class="language-card python-card">
+
+            <div class="language-icon">🐍</div>
+
+            <h3>Python</h3>
+
+            <p>
+                Learn the basics of programming with
+                simple and fun Python adventures.
+            </p>
+
+            <span class="difficulty beginner">
+                🌱 Beginner Friendly
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+
+        <div class="language-card html-card">
+
+            <div class="language-icon">🌐</div>
+
+            <h3>HTML</h3>
+
+            <p>
+                Learn how websites are built and
+                create your very first webpage.
+            </p>
+
+            <span class="difficulty beginner">
+                🌱 Beginner Friendly
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+
+        <div class="language-card css-card">
+
+            <div class="language-icon">🎨</div>
+
+            <h3>CSS</h3>
+
+            <p>
+                Make your websites colorful,
+                creative, and beautiful.
+            </p>
+
+            <span class="difficulty beginner">
+                🌱 Beginner Friendly
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+
+        <div class="language-card javascript-card">
+
+            <div class="language-icon">⚡</div>
+
+            <h3>JavaScript</h3>
+
+            <p>
+                Make your websites interactive
+                and bring your ideas to life.
+            </p>
+
+            <span class="difficulty intermediate">
+                ⭐ Intermediate
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+
+        <div class="language-card csharp-card">
+
+            <div class="language-icon">#️⃣</div>
+
+            <h3>C#</h3>
+
+            <p>
+                Level up your programming skills
+                and discover the world of C#.
+            </p>
+
+            <span class="difficulty intermediate">
+                ⭐ Intermediate
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+
+        <div class="language-card java-card">
+
+            <div class="language-icon">☕</div>
+
+            <h3>Java</h3>
+
+            <p>
+                Take on new challenges and learn
+                the fundamentals of Java.
+            </p>
+
+            <span class="difficulty advanced">
+                🚀 Advanced
+            </span>
+
+            <a href="#">Start Quest →</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="how-section" id="how-it-works">
+
+    <div class="section-heading">
+
+        <p class="section-label">🚀 HOW IT WORKS</p>
+
+        <h2>
+            Your Coding Adventure <span>Starts Here!</span>
+        </h2>
+
+    </div>
+
+
+    <div class="steps-container">
+
+        <div class="step-card">
+
+            <div class="step-number">1</div>
+
+            <div class="step-icon">🧑‍🚀</div>
+
+            <h3>Create Your Hero</h3>
+
+            <p>
+                Create your CodeQuest account
+                and begin your coding journey.
+            </p>
+
+        </div>
+
+
+        <div class="step-card">
+
+            <div class="step-number">2</div>
+
+            <div class="step-icon">🗺️</div>
+
+            <h3>Choose a Quest</h3>
+
+            <p>
+                Pick a programming language
+                and explore exciting lessons.
+            </p>
+
+        </div>
+
+
+        <div class="step-card">
+
+            <div class="step-number">3</div>
+
+            <div class="step-icon">🧩</div>
+
+            <h3>Solve Challenges</h3>
+
+            <p>
+                Complete quizzes and coding challenges
+                to earn XP and rewards.
+            </p>
+
+        </div>
+
+
+        <div class="step-card">
+
+            <div class="step-number">4</div>
+
+            <div class="step-icon">🏆</div>
+
+            <h3>Become a Code Hero</h3>
+
+            <p>
+                Earn badges, level up,
+                and become a coding champion!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="cta-content">
+
+        <div class="cta-icon">
+            🚀
+        </div>
+
+        <h2>
+            Ready to Start Your Coding Adventure?
+        </h2>
+
+        <p>
+            Join CodeQuest and discover how much fun
+            programming can be!
+        </p>
+
+        <a asp-controller="Account"
+        asp-action="Register"
+        class="cta-button">🌟 Join CodeQuest</a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        🚀 CodeQuest
+    </div>
+
+    <p>
+        Making coding fun, one quest at a time! 💻✨
+    </p>
+
+    <p class="copyright">
+        © 2026 CodeQuest. All rights reserved.
+    </p>
+
+</footer>

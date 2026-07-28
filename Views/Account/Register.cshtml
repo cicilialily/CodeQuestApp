@@ -1,0 +1,106 @@
+@{
+    ViewData["Title"] = "Create Your Account";
+}
+
+<div class="auth-page">
+
+    <div class="auth-card">
+
+        <div class="auth-icon">
+            🚀
+        </div>
+
+        <h1>Join CodeQuest!</h1>
+
+        <p class="auth-subtitle">
+            Create your coding hero account
+            and start your adventure.
+        </p>
+
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="error-message">
+                ⚠️ @ViewBag.Error
+            </div>
+        }
+
+
+        <form asp-controller="Account"
+              asp-action="Register"
+              method="post">
+
+            @Html.AntiForgeryToken()
+
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    👤 Your Name
+                </label>
+
+                <input type="text"
+                       id="fullName"
+                       name="fullName"
+                       placeholder="Enter your name"
+                       required />
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    📧 Email Address
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required />
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    🔐 Create a Password
+                </label>
+
+                <input type="password"
+                       id="password"
+                       name="password"
+                       placeholder="Create a password"
+                       required />
+
+            </div>
+
+
+            <button type="submit"
+                    class="auth-button">
+
+                🚀 Start My Adventure
+
+            </button>
+
+        </form>
+
+
+        <p class="auth-footer">
+
+            Already have an account?
+
+            <a asp-controller="Account"
+               asp-action="Login">
+
+                Log in
+
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
