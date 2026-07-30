@@ -1,0 +1,109 @@
+@model CodeQuest.Models.User
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+
+    <nav class="dashboard-nav">
+
+        <div class="logo">
+            🚀 CodeQuest
+        </div>
+
+        <div class="nav-right">
+
+            <span>
+                @Model.FullName
+            </span>
+
+            <a asp-controller="Account"
+               asp-action="Logout"
+               class="logout-btn">
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="welcome-card">
+
+        <h1>
+            Welcome back,
+            @ViewBag.UserName!
+        </h1>
+
+        <p>
+            Ready for another coding adventure?
+        </p>
+
+    </section>
+
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            ⭐
+
+            <h2>@Model.XP XP</h2>
+
+            <p>Experience Points</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            🏆
+
+            <h2>Level @Model.Level</h2>
+
+            <p>Current Level</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            🔥
+
+            <h2>0</h2>
+
+            <p>Day Streak</p>
+
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">
+        Continue Learning
+    </h2>
+
+    <div class="courses">
+
+        <div class="course-card">
+            🐍
+            <h3>Python</h3>
+            <p>0% Complete</p>
+        </div>
+
+        <div class="course-card">
+            🌐
+            <h3>HTML</h3>
+            <p>0% Complete</p>
+        </div>
+
+        <div class="course-card">
+            🎨
+            <h3>CSS</h3>
+            <p>0% Complete</p>
+        </div>
+
+    </div>
+
+</div>

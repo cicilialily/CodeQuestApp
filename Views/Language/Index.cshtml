@@ -1,0 +1,42 @@
+@model List<CodeQuest.Models.ProgrammingLanguage>
+
+@{
+    ViewData["Title"] = "Programming Languages";
+}
+
+<div class="languages-page">
+
+    <h1>🌍 Explore Programming Languages</h1>
+
+    <p>Choose a language and begin your adventure!</p>
+
+    <div class="language-grid">
+
+        @foreach (var language in Model)
+        {
+            <div class="language-card">
+
+                <div class="language-icon">
+                    @language.Icon
+                </div>
+
+                <h2>@language.Name</h2>
+
+                <p>@language.Description</p>
+
+                <span class="difficulty">
+                    @language.Difficulty
+                </span>
+
+                <br /><br />
+
+                <a href="#" class="start-btn">
+                    Start Learning
+                </a>
+
+            </div>
+        }
+
+    </div>
+
+</div>
