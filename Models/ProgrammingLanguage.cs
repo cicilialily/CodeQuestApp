@@ -17,4 +17,6 @@ public class ProgrammingLanguage
     public string Icon { get; set; } = "💻";
 
     public string Color { get; set; } = "#6c4bdc";
+
+    public ICollection<Lesson> Lessons { get; set; } = new List<Lesson>();
 }

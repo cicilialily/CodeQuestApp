@@ -3,6 +3,7 @@ using System;
 using CodeQuest.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CodeQuestApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260804164913_AddLessons")]
+    partial class AddLessons
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,10 +34,6 @@ namespace CodeQuestApp.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("FunFact")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -88,48 +87,6 @@ namespace CodeQuestApp.Migrations
                     b.ToTable("ProgrammingLanguages");
                 });
 
-            modelBuilder.Entity("CodeQuest.Models.Quiz", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CorrectAnswer")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("LessonId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("OptionA")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("OptionB")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("OptionC")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("OptionD")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LessonId");
-
-                    b.ToTable("Quizzes");
-                });
-
             modelBuilder.Entity("CodeQuest.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -178,22 +135,6 @@ namespace CodeQuestApp.Migrations
                         .IsRequired();
 
                     b.Navigation("ProgrammingLanguage");
-                });
-
-            modelBuilder.Entity("CodeQuest.Models.Quiz", b =>
-                {
-                    b.HasOne("CodeQuest.Models.Lesson", "Lesson")
-                        .WithMany("Quizzes")
-                        .HasForeignKey("LessonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Lesson");
-                });
-
-            modelBuilder.Entity("CodeQuest.Models.Lesson", b =>
-                {
-                    b.Navigation("Quizzes");
                 });
 
             modelBuilder.Entity("CodeQuest.Models.ProgrammingLanguage", b =>

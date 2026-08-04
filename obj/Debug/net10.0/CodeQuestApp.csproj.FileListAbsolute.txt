@@ -187,4 +187,4 @@ C:\Users\Lily\CodeQuestApp\obj\Debug\net10.0\CodeQuestApp.genruntimeconfig.cache
 C:\Users\Lily\CodeQuestApp\obj\Debug\net10.0\ref\CodeQuestApp.dll
 C:\Users\Lily\CodeQuestApp\bin\Debug\net10.0\BCrypt-Net-Next.dll
 C:\Users\Lily\CodeQuestApp\obj\Debug\net10.0\CodeQuestApp.sourcelink.json
-C:\Users\Lily\CodeQuestApp\obj\Debug\net10.0\compressed\ucrja5kakv-{0}-8kpj18df32-8kpj18df32.gz
+C:\Users\Lily\CodeQuestApp\obj\Debug\net10.0\compressed\ucrja5kakv-{0}-82qpw1ayca-82qpw1ayca.gz

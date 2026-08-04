@@ -13,4 +13,7 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
 
     public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
+
+    public DbSet<Lesson> Lessons { get; set; }
+    public DbSet<Quiz> Quizzes { get; set; }
 }

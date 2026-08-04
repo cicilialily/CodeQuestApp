@@ -1,0 +1,60 @@
+@model CodeQuest.Models.Lesson
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="lesson-container">
+
+    <div class="lesson-header">
+        <h1>@Model.ProgrammingLanguage?.Icon @Model.Title</h1>
+        <h3>@Model.ProgrammingLanguage?.Name</h3>
+    </div>
+
+    <div class="lesson-card">
+        <h2>📖 Lesson @Model.LessonNumber</h2>
+
+        <p style="white-space:pre-line">
+            @Model.Content
+        </p>
+    </div>
+
+    <div class="fun-fact">
+        <h3>⭐ Fun Fact</h3>
+        <p>@Model.FunFact</p>
+    </div>
+
+    <div class="lesson-buttons">
+
+        @if (Model.LessonNumber > 1)
+        {
+            <a asp-controller="Lesson"
+               asp-action="Details"
+               asp-route-id="1"
+               class="lesson-btn">
+                ⬅ Previous Lesson
+            </a>
+        }
+
+        @if (Model.LessonNumber == 1)
+        {
+            <a asp-controller="Lesson"
+               asp-action="Details"
+               asp-route-id="2"
+               class="lesson-btn">
+                Next Lesson ➜
+            </a>
+        }
+        else
+        {
+            <a asp-controller="Quiz"
+               asp-action="Index"
+               asp-route-id="@Model.Id"
+               class="lesson-btn">
+                🧠 Take Quiz
+            </a>
+        }
+
+    </div>
+
+</div>

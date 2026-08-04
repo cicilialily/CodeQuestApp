@@ -126,10 +126,24 @@ body {
     font-weight: bold;
 }
 
-.start-btn {
-    background: #6c4bdc;
-    color: white;
-    box-shadow: 0 8px 20px rgba(108,75,220,0.25);
+.start-btn{
+    display:block;
+    margin-top:25px;
+    width:100%;
+    padding:15px;
+    background:#6C4BDC;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    background:#5635cc;
+    transform:scale(1.03);
 }
 
 .explore-btn {
@@ -138,9 +152,7 @@ body {
 }
 
 
-/* =========================
-   HERO CODE CARD
-========================= */
+
 
 .hero-character {
     width: 430px;
@@ -818,5 +830,215 @@ body {
     border-radius:30px;
     font-weight:bold;
 }
+.lesson-page{
+    max-width:900px;
+    margin:50px auto;
+    padding:40px;
+}
 
+.lesson-page h1{
+    color:#6c4bdc;
+}
 
+.lesson-content{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* =========================
+   START LEARNING BUTTON
+========================= */
+
+.start-btn{
+    display:block;
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    background:#6c4bdc;
+    color:white !important;
+    text-decoration:none;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    box-shadow:0 8px 20px rgba(108,75,220,.25);
+    transition:.3s;
+}
+
+.start-btn:hover{
+    background:#5635cc;
+    transform:translateY(-3px);
+}
+
+.lesson-info{
+    margin-top:20px;
+    color:#666;
+    font-size:16px;
+}
+
+.xp-info{
+    margin-top:10px;
+    color:#ff9800;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* =========================
+   LANGUAGE PAGE
+========================= */
+
+.languages-page{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.languages-page h1{
+    text-align:center;
+    font-size:42px;
+    color:#25213d;
+    margin-bottom:15px;
+}
+
+.languages-page p{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.language-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.language-card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.language-card:hover{
+    transform:translateY(-10px);
+}
+
+.language-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.language-card h2{
+    margin-bottom:10px;
+    color:#25213d;
+}
+
+.language-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+.difficulty{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 18px;
+    background:#f3efff;
+    color:#6c4bdc;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.lesson-info{
+    margin-top:20px;
+    font-size:16px;
+    color:#555;
+}
+
+.xp-info{
+    margin-top:10px;
+    margin-bottom:25px;
+    font-size:16px;
+    color:#ff9800;
+    font-weight:bold;
+}
+
+/* =========================
+   START LEARNING BUTTON
+========================= */
+
+.learn-btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    background:#6c4bdc;
+    color:#ffffff !important;
+    text-decoration:none;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:35px;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(108,75,220,.25);
+}
+
+.learn-btn:hover{
+    background:#5635cc;
+    color:white !important;
+    transform:translateY(-3px);
+}
+
+.lesson-container{
+    max-width:900px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.lesson-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.lesson-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:30px;
+}
+
+.lesson-card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.fun-fact{
+    background:#fff4d6;
+    border-left:8px solid orange;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+}
+
+.lesson-buttons{
+    display:flex;
+    justify-content:space-between;
+}
+
+.lesson-btn{
+    background:#6c4bdc;
+    color:white;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.lesson-btn:hover{
+    background:#5635cc;
+}

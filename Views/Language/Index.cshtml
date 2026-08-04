@@ -6,9 +6,9 @@
 
 <div class="languages-page">
 
-    <h1>🌍 Explore Programming Languages</h1>
+    <h1>🚀 Choose Your Coding Adventure!</h1>
 
-    <p>Choose a language and begin your adventure!</p>
+    <p>Click a programming language to begin your journey.</p>
 
     <div class="language-grid">
 
@@ -28,11 +28,18 @@
                     @language.Difficulty
                 </span>
 
-                <br /><br />
+                <div class="lesson-info">
+                    📚 1 Lesson
+                </div>
 
-                <a href="#" class="start-btn">
-                    Start Learning
-                </a>
+                <div class="xp-info">
+                    ⭐ Earn 50 XP
+                </div>
+
+                <a asp-controller="Lesson"
+                 asp-action="Details"
+                 asp-route-id="@language.Id"
+                 class="start-btn">🚀 Start Learning</a>
 
             </div>
         }
